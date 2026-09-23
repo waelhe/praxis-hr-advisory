@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "manager having a one-on-one coaching conversation with an employee in a modern office, authentic workplace",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/39d15912025d.jpg",
+      "caption": "",
+      "source": "LinkedIn",
+      "original_width": "1279px",
+      "original_height": "854px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/22d7470eb841.webp",
+      "caption": "",
+      "source": "MindGym",
+      "original_width": "2000px",
+      "original_height": "1396px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/68ef41664443.png",
+      "caption": "",
+      "source": "Niagara Institute",
+      "original_width": "1920px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5d702b77ba52.jpg",
+      "caption": "",
+      "source": "Rippling",
+      "original_width": "990px",
+      "original_height": "1278px"
+    }
+  ]
+}

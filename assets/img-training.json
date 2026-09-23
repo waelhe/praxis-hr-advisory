@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "professionals attending a corporate training workshop in a conference room, candid",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/abcd45620f01.jpg",
+      "caption": "",
+      "source": "Tallo",
+      "original_width": "2752px",
+      "original_height": "1536px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/92b50080c7e5.jpg",
+      "caption": "",
+      "source": "Urban Milwaukee",
+      "original_width": "6000px",
+      "original_height": "4000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/962c004c6986.jpg",
+      "caption": "",
+      "source": "Retail Industry Leaders Association (RILA)",
+      "original_width": "6874px",
+      "original_height": "4587px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/de681092c430.jpg",
+      "caption": "",
+      "source": "EY",
+      "original_width": "3840px",
+      "original_height": "2560px"
+    }
+  ]
+}

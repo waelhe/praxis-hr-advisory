@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "diverse team of professionals having a discussion in a bright modern office meeting room",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e1203e547ee1.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "987px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/df31eff14fdf.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1100px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8478ec6f4ac0.jpg",
+      "caption": "",
+      "source": "Avalon",
+      "original_width": "1000px",
+      "original_height": "1055px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eb8622aea211.jpg",
+      "caption": "",
+      "source": "Northeastern University Graduate Programs",
+      "original_width": "1200px",
+      "original_height": "960px"
+    }
+  ]
+}

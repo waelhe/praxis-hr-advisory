@@ -1,0 +1,282 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), var(--font-plex-ar), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-kufi-ar), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-serif: var(--font-sourceserif), var(--font-plex-ar), Georgia, "Times New Roman", serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* ── Praxis brand palette ─────────────────────────────── */
+  --color-navy-50: #F2F6F9;
+  --color-navy-100: #E3EBF2;
+  --color-navy-200: #C6D6E3;
+  --color-navy-300: #9BB7CC;
+  --color-navy-400: #6E91AB;
+  --color-navy-500: #4C708E;
+  --color-navy-600: #385971;
+  --color-navy-700: #2B465A;
+  --color-navy-800: #1E3444;
+  --color-navy-900: #152837;
+  --color-navy-950: #0A1A26;
+
+  --color-sage-50: #F3F7F4;
+  --color-sage-100: #E2EDE4;
+  --color-sage-200: #C4D9C9;
+  --color-sage-300: #9CBBA5;
+  --color-sage-400: #77987F;
+  --color-sage-500: #5A7A62;
+  --color-sage-600: #47634E;
+  --color-sage-700: #3A5140;
+
+  --color-tealbr-600: #0E7C72;
+  --color-tealbr-700: #0B655D;
+  --color-tealbr-50: #EDF7F6;
+  --color-tealbr-100: #D7EDEA;
+  --color-tealbr-200: #A9D9D4;
+
+  --color-amberbr-50: #FDF6EC;
+  --color-amberbr-100: #F9E9CE;
+  --color-amberbr-500: #D97706;
+  --color-amberbr-600: #B45309;
+  --color-amberbr-700: #92400E;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: #FFFFFF;
+  --foreground: #0A1A26;
+  --card: #FFFFFF;
+  --card-foreground: #0A1A26;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A1A26;
+  --primary: #152837;
+  --primary-foreground: #F7FAFC;
+  --secondary: #EEF3F7;
+  --secondary-foreground: #1E3444;
+  --muted: #F2F6F9;
+  --muted-foreground: #55697B;
+  --accent: #E9F3F1;
+  --accent-foreground: #0B655D;
+  --destructive: #B42318;
+  --border: #DCE5EC;
+  --input: #D5DFE8;
+  --ring: #0E7C72;
+  --chart-1: #0E7C72;
+  --chart-2: #4C708E;
+  --chart-3: #5A7A62;
+  --chart-4: #B45309;
+  --chart-5: #9BB7CC;
+  --sidebar: #F9FBFC;
+  --sidebar-foreground: #0A1A26;
+  --sidebar-primary: #152837;
+  --sidebar-primary-foreground: #F7FAFC;
+  --sidebar-accent: #EEF3F7;
+  --sidebar-accent-foreground: #1E3444;
+  --sidebar-border: #DCE5EC;
+  --sidebar-ring: #0E7C72;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04";
+  }
+  ::selection {
+    background: #A9D9D4;
+    color: #0A1A26;
+  }
+}
+
+/* ── Arabic (RTL) typography adjustments ─────────────────── */
+/* Arabic script must never use letter-spacing (it breaks letter
+   joining) — neutralize all tracking utilities in RTL.        */
+html[lang="ar"] * {
+  letter-spacing: normal !important;
+}
+
+/* Synthesized oblique italics render poorly for Arabic — use the
+   natural upright Kufi/Plex shapes for quotes and emphasis.     */
+html[lang="ar"] em,
+html[lang="ar"] .italic,
+html[lang="ar"] .diagnosis-md em {
+  font-style: normal;
+}
+
+/* Arabic needs taller leading in headings than Latin display type. */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  line-height: 1.4;
+}
+
+/* Uppercase tracking has no meaning in Arabic — soften the eyebrow
+   treatment for the RTL locale.                                */
+html[lang="ar"] .eyebrow {
+  text-transform: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Layout shell ────────────────────────────────────────── */
+.shell {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+/* ── Editorial details ───────────────────────────────────── */
+.eyebrow {
+  @apply text-[11px] font-semibold uppercase tracking-[0.18em];
+}
+
+.hairline {
+  @apply border-t border-navy-200/70;
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(155, 183, 204, 0.22) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.dot-grid-dark {
+  background-image: radial-gradient(circle, rgba(155, 183, 204, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.line-grid-navy {
+  background-image:
+    linear-gradient(to right, rgba(155, 183, 204, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(155, 183, 204, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* ── Markdown (AI diagnosis output) ──────────────────────── */
+.diagnosis-md {
+  @apply text-[13.5px] leading-relaxed text-navy-800;
+}
+.diagnosis-md > *:first-child {
+  margin-top: 0 !important;
+}
+.diagnosis-md h1,
+.diagnosis-md h2 {
+  @apply mt-5 mb-2 font-display text-[15px] font-bold tracking-tight text-navy-900;
+  @apply border-b border-navy-200/80 pb-1.5;
+}
+.diagnosis-md h3 {
+  @apply mt-5 mb-1.5 font-display text-[13.5px] font-bold tracking-tight text-tealbr-700;
+}
+.diagnosis-md h4 {
+  @apply mt-3 mb-1 font-display text-[12.5px] font-semibold text-navy-800;
+}
+.diagnosis-md p {
+  @apply my-2.5;
+}
+.diagnosis-md ul {
+  @apply my-2.5 space-y-1.5 ps-4;
+}
+.diagnosis-md ul > li {
+  @apply relative ps-4;
+}
+.diagnosis-md ul > li::before {
+  content: "";
+  @apply absolute start-0 top-[0.55em] h-1 w-1 rounded-full bg-tealbr-600;
+}
+.diagnosis-md ol {
+  @apply my-2.5 space-y-1.5 ps-4;
+}
+.diagnosis-md ol > li {
+  @apply relative ps-5;
+  list-style: decimal;
+}
+.diagnosis-md strong {
+  @apply font-semibold text-navy-900;
+}
+.diagnosis-md em {
+  @apply font-serif italic text-navy-700;
+}
+.diagnosis-md blockquote {
+  @apply my-3 border-s-2 border-amberbr-500 bg-amberbr-50 px-3 py-2 text-navy-700;
+}
+.diagnosis-md hr {
+  @apply my-4 border-navy-200;
+}
+.diagnosis-md table {
+  @apply my-3 w-full border-collapse overflow-hidden text-[12px];
+}
+.diagnosis-md th {
+  @apply border border-navy-200 bg-navy-50 px-2.5 py-1.5 text-start font-semibold text-navy-900;
+}
+.diagnosis-md td {
+  @apply border border-navy-200 px-2.5 py-1.5 align-top;
+}
+.diagnosis-md code {
+  @apply rounded bg-navy-100 px-1 py-0.5 font-mono text-[11.5px] text-navy-800;
+}
+
+/* ── Chat scroll area ────────────────────────────────────── */
+.chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #9BB7CC transparent;
+}
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: #9BB7CC;
+  border-radius: 999px;
+}
+.chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── Slow pulse for the "analyzing" indicator ────────────── */
+@keyframes soft-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.soft-pulse {
+  animation: soft-pulse 1.6s ease-in-out infinite;
+}
+
+/* ── Number tabular figures for stats/calculator ─────────── */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
